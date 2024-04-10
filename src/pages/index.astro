@@ -23,7 +23,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Mingalaba</h1>
+      <h1>Li SunKe</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -42,87 +42,94 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
 
       <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
+        个人技能 <label>php</label> 、golang 、java 、mysql 、elasticsearch 、redis
       </p>
-      <p>
-        Read the blog posts or check
-        <LinkButton
-          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
-      </p>
-      {
-        // only display if at least one social link is enabled
-        socialCount > 0 && (
-          <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
+      追求公平，喜欢生活，需要双向奔赴的人。
     </section>
-
-    <Hr />
-
+    <p>
+      这个是之前写的日记，会一点点搬过来
+      <LinkButton
+        className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+        href="https://www.yuque.com/crazyzard/gp4crq"
+      >
+        README
+      </LinkButton> .
+    </p>
+    <p>
+      这个是之前当初PHPER的笔记
+      <LinkButton
+        className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+        href="https://learnku.com/users/29212"
+      >
+        README
+      </LinkButton> .
+    </p>
     {
-      featuredPosts.length > 0 && (
-        <>
-          <section id="featured">
-            <h2>Featured</h2>
-            <ul>
-              {featuredPosts.map(({ data, slug }) => (
+      // only display if at least one social link is enabled
+      socialCount > 0 && (
+        <div class="social-wrapper">
+          <div class="social-links">Social Links:</div>
+          <Socials />
+        </div>
+      )
+    }
+  </main>
+
+  <Hr />
+
+  {
+    featuredPosts.length > 0 && (
+      <>
+        <section id="featured">
+          <h2>Featured</h2>
+          <ul>
+            {featuredPosts.map(({ data, slug }) => (
+              <Card
+                href={`/posts/${slug}/`}
+                frontmatter={data}
+                secHeading={false}
+              />
+            ))}
+          </ul>
+        </section>
+        {recentPosts.length > 0 && <Hr />}
+      </>
+    )
+  }
+
+  {
+    recentPosts.length > 0 && (
+      <section id="recent-posts">
+        <h2>曾经的文章</h2>
+        <ul>
+          {recentPosts.map(
+            ({ data, slug }, index) =>
+              index < 4 && (
                 <Card
                   href={`/posts/${slug}/`}
                   frontmatter={data}
                   secHeading={false}
                 />
-              ))}
-            </ul>
-          </section>
-          {recentPosts.length > 0 && <Hr />}
-        </>
-      )
-    }
+              )
+          )}
+        </ul>
+      </section>
+    )
+  }
 
-    {
-      recentPosts.length > 0 && (
-        <section id="recent-posts">
-          <h2>Recent Posts</h2>
-          <ul>
-            {recentPosts.map(
-              ({ data, slug }, index) =>
-                index < 4 && (
-                  <Card
-                    href={`/posts/${slug}/`}
-                    frontmatter={data}
-                    secHeading={false}
-                  />
-                )
-            )}
-          </ul>
-        </section>
-      )
-    }
-
-    <div class="all-posts-btn-wrapper">
-      <LinkButton href="/posts/">
-        All Posts
-        <svg xmlns="http://www.w3.org/2000/svg"
-          ><path
-            d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-          ></path>
-        </svg>
-      </LinkButton>
-    </div>
-  </main>
-
-  <Footer />
+  <div class="all-posts-btn-wrapper">
+    <LinkButton href="/posts/">
+      All Posts
+      <svg xmlns="http://www.w3.org/2000/svg"
+        ><path
+          d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+        ></path>
+      </svg>
+    </LinkButton>
+  </div>
 </Layout>
+
+<Footer />
 
 <style>
   /* ===== Hero Section ===== */
