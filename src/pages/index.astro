@@ -44,35 +44,36 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <p>
         个人技能 <label>php</label> 、golang 、java 、mysql 、elasticsearch 、redis
       </p>
-      追求公平，喜欢生活，需要双向奔赴的人。
+      <p>追求公平，喜欢生活，需要双向奔赴的人。</p>
+
+      <p>
+        这个是之前写的日记，会一点点搬过来
+        <LinkButton
+          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+          href="https://www.yuque.com/crazyzard/gp4crq"
+        >
+          README
+        </LinkButton> .
+      </p>
+      <p>
+        这个是之前当初PHPER的笔记
+        <LinkButton
+          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+          href="https://learnku.com/users/29212"
+        >
+          README
+        </LinkButton> .
+      </p>
+      {
+        // only display if at least one social link is enabled
+        socialCount > 0 && (
+          <div class="social-wrapper">
+            <div class="social-links">Social Links:</div>
+            <Socials />
+          </div>
+        )
+      }
     </section>
-    <p>
-      这个是之前写的日记，会一点点搬过来
-      <LinkButton
-        className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-        href="https://www.yuque.com/crazyzard/gp4crq"
-      >
-        README
-      </LinkButton> .
-    </p>
-    <p>
-      这个是之前当初PHPER的笔记
-      <LinkButton
-        className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-        href="https://learnku.com/users/29212"
-      >
-        README
-      </LinkButton> .
-    </p>
-    {
-      // only display if at least one social link is enabled
-      socialCount > 0 && (
-        <div class="social-wrapper">
-          <div class="social-links">Social Links:</div>
-          <Socials />
-        </div>
-      )
-    }
   </main>
 
   <Hr />
