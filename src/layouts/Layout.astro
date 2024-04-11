@@ -44,7 +44,12 @@ const socialImageURL = new URL(
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
-
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="朝圣之路"
+      href={`${Astro.site}rss.xml`}
+    />
     <!-- General Meta Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
