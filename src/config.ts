@@ -36,10 +36,4 @@ export const SOCIALS: SocialObjects = [
     linkTitle: `Send an email to ${SITE.title}`,
     active: true,
   },
-  {
-    name: "Discord",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Discord`,
-    active: false,
-  },
 ];
