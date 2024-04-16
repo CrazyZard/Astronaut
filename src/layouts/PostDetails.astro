@@ -80,7 +80,11 @@ const layoutProps = {
     <ul class="my-8">
       {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}
     </ul>
-
+    <div class="my-8">
+      <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+      </span>
+    </div>
     <div
       class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"
     >
