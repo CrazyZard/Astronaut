@@ -1,14 +1,15 @@
-```
+---
 author: Lisunke
 pubDatetime: 2024-04-26
 title: 做团队的一些想法
-slug: a lot of thought for work
+slug: some_thought
 featured: true
 draft: false
 tags:
   - 想法
-description: 感觉一个良好的博客系统是需要一个反馈的
-```
+  - 工作
+description: 职业自我反思
+---
 
 ## <center> 想从 人 团队 公司 3个方向找到自己定位</center>
 
